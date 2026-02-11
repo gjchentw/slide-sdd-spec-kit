@@ -1,11 +1,11 @@
 <!--
 Sync Impact Report:
-- Version change: 1.0.0 → 1.1.0 (minor update with Spec Kit principles integration)
-- Modified principles: Enhanced with Spec Kit core directives and architectural mandates
-- Added sections: Core Prime Directive, The Source of Truth, Architectural Mandates, Development Discipline, AI Agent Directives
-- Removed sections: None (existing principles enhanced)
-- Templates requiring updates: ✅ Updated all template references to align with new principles
-- Follow-up TODOs: None
+- Version change: 1.1.0 → 1.2.0 (minor update adding language and documentation standards)
+- Modified principles: Enhanced Article VI with Traditional Chinese mandate for AI agents
+- Added sections: Article VII: 語言與文檔標準 (Language and Documentation Standards)
+- Removed sections: None
+- Templates requiring updates: ⚠ .specify/templates/spec-template.md, .specify/templates/plan-template.md, .specify/templates/tasks-template.md, .opencode/command/speckit.*.md
+- Follow-up TODOs: Update all templates to enforce Traditional Chinese requirement and add language validation to specification commands
 -->
 
 # slide-sdd-spec-kit Constitution
@@ -116,6 +116,37 @@ Sync Impact Report:
 
 3.  **遵循 Git 結構**：始終檢查當前 Git 分支，確保你的修改僅限於該分支對應的 `specs/` 目錄與相關聯的代碼。
 
+4.  **正體中文強制令 (Traditional Chinese Mandate)**：AI 代理人 MUST 強力提醒用戶使用正體中文撰寫所有規格文件，並在偵測到非正體中文內容時主動要求更正。
+
+---
+
+## Article VII: 語言與文檔標準 (Language and Documentation Standards)
+
+### 7.1 正體中文強制令 (Traditional Chinese Mandate)
+
+*   **規格語言 (Specification Language)**：所有專案規格文件 MUST 使用正體中文撰寫，嚴禁使用簡體中文或英文作為主要語言。
+*   **術語一致性 (Terminology Consistency)**：必須使用台灣程式設計社群標準術語，包含但不限於：函式 (function)、變數 (variable)、資料庫 (database)、API (介面程式)、框架 (framework)、函式庫 (library)。
+*   **AI 代理人責任 (AI Agent Responsibility)**：AI 代理人 MUST 在偵測到規格文件包含非正體中文時立即警告並要求更正，無論是簡體中文還是英文內容。
+*   **執行層級 (Enforcement Level)**：強烈推薦級別 - AI 代理人應堅持正體中文原則，但在用戶明確堅持並提供合理理由時可記錄例外，但必須在文件中註記語言選擇原因。
+
+### 7.2 技術術語處理 (Technical Terminology Handling)
+
+*   **英文縮寫保留 (English Acronyms Retention)**：常用技術縮寫如 API、CLI、JSON、HTML、CSS、JavaScript 等可直接使用，無需翻譯。
+*   **專有名詞處理 (Proper Nouns Handling)**：產品名稱、品牌名稱、開發工具名稱等專有名詞得保留原文，但應在首次出現時提供中文說明。
+*   **程式碼例外 (Code Exception)**：程式碼片段、變數名稱、函式名稱、檔案路徑等程式相關內容得使用英文，但周邊解釋文字必須為正體中文。
+
+### 7.3 文件品質標準 (Documentation Quality Standards)
+
+*   **可讀性優先 (Readability First)**：正體中文文件必須確保用詞準確、語意清晰、語法正確，避免機器翻譯的生硬表達。
+*   **一致性檢查 (Consistency Check)**：同一專案內必須保持術語使用一致性，相同概念不得使用不同中文譯名。
+*   **母語者審查 (Native Speaker Review)**：重要規格文件建議經由正體中文母語者審查，確保自然流暢的表達。
+
+### 7.4 例外處理程序 (Exception Handling Process)
+
+*   **例外申請 (Exception Request)**：若因特殊需求必須使用非正體中文，用戶必須明確說明理由並獲得團隊同意。
+*   **例外記錄 (Exception Documentation)**：所有語言例外都必須在規格文件開頭明確記錄，說明語言選擇原因與適用範圍。
+*   **雙語文件支持 (Bilingual Support)**：在例外情況下，鼓勵提供正體中文翻譯版本作為附錄或替代文件。
+
 ---
 
 ## Governance (治理)
@@ -136,4 +167,4 @@ Sync Impact Report:
 
 ---
 
-**版本**: 1.1.0 | **批准日期**: 2026-02-11 | **最後修改**: 2026-02-11
+**版本**: 1.2.0 | **批准日期**: 2026-02-11 | **最後修改**: 2026-02-11

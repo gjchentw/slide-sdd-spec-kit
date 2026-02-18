@@ -24,11 +24,17 @@
                  data-separator-vertical="^--" 
                  data-separator-notes="^Note:">
         </section>
+        <section data-markdown="slides/01-sdd-intro.md"
+                 data-separator="^---"
+                 data-separator-vertical="^--"
+                 data-separator-notes="^Note:">
+        </section>
       </div>
     </div>
     <script src="node_modules/reveal.js/dist/reveal.js"></script>
     <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
     <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+    <script src="node_modules/reveal.js-mermaid-plugin/plugin/mermaid/mermaid.js"></script>
     <script>
       Reveal.initialize({
         width: 1920,
@@ -36,7 +42,7 @@
         margin: 0.04,
         minScale: 0.2,
         maxScale: 2.0,
-        plugins: [ RevealMarkdown, RevealNotes ]
+        plugins: [ RevealMarkdown, RevealNotes, RevealMermaid ]
       });
     </script>
   </body>

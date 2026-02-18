@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <title>Slide SDD Spec Kit</title>
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css">
+    <style>
+      /* 21:9 Aspect Ratio Override */
+      .reveal .slides {
+        width: 1920px !important;
+        height: 1080px !important;
+      }
+          .reveal .slides section.cover h1 { font-size: 3em; margin-bottom: 0.5em; }
+      .reveal .slides section.cover h2 { font-size: 1.5em; color: #888; }
+      .reveal .slides section.cover h3 { font-size: 1.2em; margin-top: 2em; }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown="slides/00-cover.md" 
+                 data-separator="^---" 
+                 data-separator-vertical="^--" 
+                 data-separator-notes="^Note:">
+        </section>
+      </div>
+    </div>
+    <script src="node_modules/reveal.js/dist/reveal.js"></script>
+    <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+    <script>
+      Reveal.initialize({
+        width: 1920,
+        height: 1080,
+        margin: 0.04,
+        minScale: 0.2,
+        maxScale: 2.0,
+        plugins: [ RevealMarkdown, RevealNotes ]
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "slide-sdd-spec-kit",
+  "version": "1.0.0",
+  "description": "Slide SDD Spec Kit Presentation",
+  "scripts": {
+    "start": "http-server . -p 8000",
+    "build": "gulp build",
+    "generate-config": "node scripts/generate-config.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "reveal.js": "^5.0.0",
+    "reveal.js-mermaid-plugin": "^2.0.0"
+  },
+  "devDependencies": {
+    "fs-extra": "^11.1.0",
+    "gulp": "^4.0.2",
+    "http-server": "^14.1.1"
+  }
+}

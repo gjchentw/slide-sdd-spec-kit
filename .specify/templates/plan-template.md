@@ -1,104 +1,60 @@
-# Implementation Plan: [FEATURE]
+# 實作計畫：[功能名稱]
 
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
-**Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
+**分支**: `[###-feature-name]` | **日期**: [日期] | **規格文件**: [連結]
+**輸入**: 來自 `/specs/[###-feature-name]/spec.md` 的功能規格
 
-**Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/plan-template.md` for the execution workflow.
+**備註**: 此範本由 `/speckit.plan` 指令填寫。執行流程請參閱指令定義。
 
-## Summary
+## 摘要
 
-[Extract from feature spec: primary requirement + technical approach from research]
+[從功能規格中提取：主要需求 + 研究得出的技術方案]
 
-## Technical Context
+## 技術背景
 
 <!--
-  ACTION REQUIRED: Replace the content in this section with the technical details
-  for the project. The structure here is presented in advisory capacity to guide
-  the iteration process.
+  必要操作：請將此區段內容替換為專案的具體技術細節。
+  此處結構僅供參考，用以引導迭代過程。
 -->
 
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**語言/版本**: [例如：Node.js 20, Python 3.11]  
+**主要依賴**: [例如：reveal.js, Mermaid.js]  
+**儲存**: [如適用，例如：Markdown files]  
+**測試**: [例如：GitHub Actions 驗證]  
+**目標平台**: [例如：GitHub Pages]
+**專案類型**: [投影專案]  
+**效能目標**: [例如：頁面載入 < 2s]  
+**限制條件**: [例如：21:9 解析度]  
+**規模/範圍**: [例如：20 頁投影片]
 
-## Constitution Check
+## 憲章檢查 (Constitution Check)
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+*關卡：必須在階段 0 研究前通過。在階段 1 設計後重新檢查。*
 
-[Gates determined based on constitution file]
+- [ ] **外部 Markdown**: 所有內容是否定義在獨立的 `.md` 檔案中？
+- [ ] **Mermaid 圖表**: 所有架構/流程圖是否使用 Mermaid.js？
+- [ ] **寬螢幕優化**: 佈局是否設定為 21:9 (1920x1080)？
+- [ ] **自動化 CI/CD**: 是否已設定 GitHub Actions 部署至 `gh-pages`？
+- [ ] **直接交付**: 投影片是否可透過 GitHub Pages 直接存取？
+- [ ] **正體中文優先**: 內容與文件是否皆使用正體中文？
 
-## Project Structure
+## 專案結構
 
-### Documentation (this feature)
+### 文件 (此功能)
 
 ```text
 specs/[###-feature]/
-├── plan.md              # This file (/speckit.plan command output)
-├── research.md          # Phase 0 output (/speckit.plan command)
-├── data-model.md        # Phase 1 output (/speckit.plan command)
-├── quickstart.md        # Phase 1 output (/speckit.plan command)
-├── contracts/           # Phase 1 output (/speckit.plan command)
-└── tasks.md             # Phase 2 output (/speckit.tasks command - NOT created by /speckit.plan)
+├── plan.md              # 此檔案 (/speckit.plan 指令輸出)
+├── research.md          # 階段 0 輸出 (/speckit.plan 指令)
+├── data-model.md        # 階段 1 輸出 (/speckit.plan 指令)
+├── quickstart.md        # 階段 1 輸出 (/speckit.plan 指令)
+├── contracts/           # 階段 1 輸出 (/speckit.plan 指令)
+└── tasks.md             # 階段 2 輸出 (/speckit.tasks 指令 - 非 plan 指令建立)
 ```
 
-### Source Code (repository root)
-<!--
-  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
-  for this feature. Delete unused options and expand the chosen structure with
-  real paths (e.g., apps/admin, packages/something). The delivered plan must
-  not include Option labels.
--->
+## 複雜度追蹤
 
-```text
-# [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
-src/
-├── models/
-├── services/
-├── cli/
-└── lib/
+> **僅在憲章檢查有違規但必須證成時填寫**
 
-tests/
-├── contract/
-├── integration/
-└── unit/
-
-# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
-backend/
-├── src/
-│   ├── models/
-│   ├── services/
-│   └── api/
-└── tests/
-
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-└── tests/
-
-# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
-api/
-└── [same as backend above]
-
-ios/ or android/
-└── [platform-specific structure: feature modules, UI flows, platform tests]
-```
-
-**Structure Decision**: [Document the selected structure and reference the real
-directories captured above]
-
-## Complexity Tracking
-
-> **Fill ONLY if Constitution Check has violations that must be justified**
-
-| Violation | Why Needed | Simpler Alternative Rejected Because |
+| 違規項目 | 必要原因 | 拒絕簡單替代方案的理由 |
 |-----------|------------|-------------------------------------|
-| [e.g., 4th project] | [current need] | [why 3 projects insufficient] |
-| [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient] |
+| [例如：使用圖片] | [具體需求] | [為何 Mermaid 無法達成] |

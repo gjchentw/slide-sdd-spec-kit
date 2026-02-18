@@ -1,28 +1,37 @@
-# [PROJECT NAME] Development Guidelines
+# [專案名稱] 開發指南
 
-Auto-generated from all feature plans. Last updated: [DATE]
+自動從所有實作計畫生成。最後更新：[日期]
 
-## Active Technologies
+## 憲章原則
 
-[EXTRACTED FROM ALL PLAN.MD FILES]
+- **外部 Markdown**: 內容定義在獨立的 `.md` 檔案中。
+- **Mermaid 圖表**: 使用 Mermaid.js 繪製圖表。
+- **寬螢幕優化**: 目標 21:9 解析度 1920x1080。
+- **自動化 CI/CD**: 推送時透過 GitHub Actions 部署至 `gh-pages`。
+- **直接交付**: 可透過 GitHub Pages 直接查看。
+- **正體中文優先**: 內容、對話與文件必須使用正體中文。
 
-## Project Structure
+## 活躍技術
+
+[從所有 PLAN.MD 檔案提取]
+
+## 專案結構
 
 ```text
-[ACTUAL STRUCTURE FROM PLANS]
+[來自實作計畫的實際結構]
 ```
 
-## Commands
+## 指令
 
-[ONLY COMMANDS FOR ACTIVE TECHNOLOGIES]
+[僅限活躍技術的指令]
 
-## Code Style
+## 程式碼風格
 
-[LANGUAGE-SPECIFIC, ONLY FOR LANGUAGES IN USE]
+[語言特定，僅限使用的語言]
 
-## Recent Changes
+## 最近變更
 
-[LAST 3 FEATURES AND WHAT THEY ADDED]
+[最後 3 個功能及其新增內容]
 
-<!-- MANUAL ADDITIONS START -->
-<!-- MANUAL ADDITIONS END -->
+<!-- 手動新增開始 -->
+<!-- 手動新增結束 -->

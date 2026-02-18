@@ -36,6 +36,7 @@ jobs:
           # Only copy reveal.js, not all node_modules
           mkdir -p dist/node_modules
           cp -r node_modules/reveal.js dist/node_modules/
+          cp -r node_modules/reveal.js-mermaid-plugin dist/node_modules/
           cp package.json dist/
           # Disable Jekyll processing
           touch dist/.nojekyll

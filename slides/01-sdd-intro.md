@@ -21,10 +21,10 @@
 
 <div class="mermaid">
 graph LR
-    Idea(創意 Idea) -->|/speckit.specify| Spec(規格 Specification)
-    Spec -->|/speckit.plan| Plan(實作計畫 Implementation Plan)
-    Plan -->|/speckit.tasks| Tasks(任務列表 Tasks)
-    Tasks -->|/speckit.implement| Code(程式碼 Code)
+    Idea(創意 Idea) --> Spec(規格 Specification)
+    Spec --> Plan(實作計畫 Implementation Plan)
+    Plan --> Tasks(任務列表 Tasks)
+    Tasks --> Code(程式碼 Code)
 
     style Idea fill:#f9f,stroke:#333,stroke-width:2px
     style Spec fill:#bbf,stroke:#333,stroke-width:2px
